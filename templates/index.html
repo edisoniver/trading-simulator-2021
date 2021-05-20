@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/main.css"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Simulator</title>
+
+</head>
+<!-- Navigation Bar -->
+    <nav class="navigation">
+      <a href="/" class="title">Trading Simulator</a>
+      <input class="menuBtn" type="checkBox" id="menuBtn"/>
+      <label class="menuIcon" for="menuBtn"><span class="navigationicon"></span></label>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/info">Information</a></li>
+      </ul>
+    </nav>
+
+
+<body>
+
+<div id="container">
+  <div id="label"> <h1>Active Positions</h1></div>
+   <div class="jumbotron jumbotron-fluid">
+  <div id='headertitle' class="container">
+
+
+{% if total_pnl < 0 %}
+    <h3 class ='text-center' style="color: red;">Total PNL: ${{total_pnl}}</h3>
+{% else %}
+    <h3 class ='text-center' style="color: green;">Total PNL: ${{total_pnl}}</h3>
+{% endif %}
+ 
+    <h3 class ='text-center' id='total_portfolio'>Total Portfolio Amount: ${{total_portfolio}}</h3>
+    <h3 class ='text-center' id="bitcoinprice">BITCOIN: $<span id='stock-price'>BTC Price loading...</span></h3>
+    <div class="container">
+    
+    <div class="row justify-content-center">
+    <div class='col-auto'>
+    <div class='table-responsive'>
+    {% for table in tables %}
+    {{ table|safe }}
+    {% endfor %}
+    </div>
+  </div>
+   </div>
+
+    </div>
+
+    <div class="container" id='edit_trades'>
+      <div class="row">
+        <div class="col text-center">
+          <div class="btn-group" role="group" aria-label="Buttons">
+
+          <a href="/trades" class="importBtn">Import Trades</a>
+          <a href="/edit_trades" class="editBtn">Edit Trades</a>
+
+          <div>
+        </div>
+      </div>
+    </div>
+    </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src= "{{ url_for('static', filename='app.js') }}"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>

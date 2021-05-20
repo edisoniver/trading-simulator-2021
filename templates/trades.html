@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/main.css"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trades</title>
+</head>
+    <nav class="navigation">
+      <a href="/" class="title">Trading Simulator</a>
+      <input class="menuBtn" type="checkBox" id="menuBtn"/>
+      <label class="menuIcon" for="menuBtn"><span class="navgationicon"></span></label>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/info">Information</a></li>
+      </ul>
+    </nav>
+
+<body>
+<div id="container">
+  <div id="label"> <h1>Import your trades</h1></div>
+    <h5 class='text-center' id='trading'> Note: When a position is placed, the price is set to 'current market price'
+
+      </h5>
+<div class="row justify-content-center">
+  <div class="col align-self-start">
+<form action="/trades" method="POST">
+
+  <div class="form-group">
+    <label class="formLabel"> Coin </label>
+    <input type="text" class="form-control" id="coin" name="coin" placeholder="Input a coin pair e.g BTC | ETH | LTC">
+  </div>
+
+  <div class="form-group">
+    <label class="formLabel">Position Size</label>
+  <input type="text" class="form-control" id="position_size" name="position_size" placeholder="Enter how many coins">
+</div>
+</div>
+
+    <div class="container" id='edit_trades'>
+      <div class="row">
+        <div class="col text-center">
+          <div class="btn-group" role="group" aria-label="Buttons">
+
+          <button type="submit" class="importBtn" href="/">Import Trades</button>
+          <a href="/" class="editBtn">Back to home</a>
+
+          <div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</div>
+</form>
+  </div>
+</div>
+</div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</body>
+</body>
+</html>

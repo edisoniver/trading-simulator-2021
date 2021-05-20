@@ -1,0 +1,295 @@
+
+
+#trading_title { 
+    font-style: italic;
+    border-style: solid;
+    padding: 20px;
+    border-color: peru;
+}
+
+#active_position {
+    padding-top: 50px;
+    text-decoration: underline;
+    padding-bottom: 30px;
+}
+
+#import_trades {
+    padding-top: 30px;
+}
+
+#information {
+    text-decoration: underline;
+}
+
+
+#homebutton {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: blue;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: 1s;
+    color: white;
+    width: 250px;
+    border: transparent;
+}
+
+#edit_trades button{
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: green;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: 1s;
+    color: white;
+    width: 250px;
+    border: transparent;
+}
+
+#edit_trades button:hover{
+    background-color: white !important;
+    color: black;
+}
+
+#homebutton:hover{
+    background-color: white !important;
+    color: black;
+}
+
+#deleted {
+    margin-top: 25px;
+}
+
+#delete_trade {
+    text-decoration: underline;
+    margin-bottom: 50px;
+
+}
+
+#coin_pair {
+    text-decoration: underline;
+    font-size: 150%;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+#coin {
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: 25%;
+}
+#position_size{
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.formLabel{
+    text-align: center;
+    margin-left: 25%;
+    font-weight: bold;
+    font-size: large;
+}
+
+#import_trades {
+    text-decoration: underline;
+    padding: 55px;
+}
+
+#import_trades_button {
+
+    margin-top: 50px;
+}
+
+
+/*Navigation bar CSS*/
+ .navigation {
+    background-color: silver;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: silver;
+  }
+  
+  .navigation li a {
+    display: block;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    transition: all ease 1s;
+    font-weight: bold;
+    padding: 20px 20px;
+  }
+  
+  .navigation li a:hover,
+  .navigation .menuBtn:hover {
+    background-color: white;
+    color: grey;
+  }
+  
+  .navigation .title {
+    display: block;
+    margin-right: auto;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    float: left;
+    font: bold 20px 'Arial', cursive;
+    color: white;
+  }
+  
+  /* menu */
+  
+  .navigation .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .navigation .menuIcon {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .navigation .menuIcon .navigationicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .1s ease-out;
+    width: 18px;
+  }
+  
+  .navigation .menuIcon .navigationicon:before,
+  .navigation .menuIcon .navigationicon:after {
+    background:white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .1s ease-out;
+    width: 100%;
+  }
+  
+  .navigation .menuIcon .navigationicon:before {
+    top: 5px;
+  }
+  
+  .navigation .menuIcon .navigationicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .navigation .menuBtn {
+    display: none;
+  }
+  
+  .navigation .menuBtn:checked ~ .menu {
+    max-height: fit-content;
+  }
+  
+  .navigation .menuBtn:checked ~ .menuIcon .navigationicon {
+    background: transparent;
+  }
+  
+  .navigation .menuBtn:checked ~ .menuIcon .navigationicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .navigation .menuBtn:checked ~ .menuIcon .navigationicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .navigation .menuBtn:checked ~ .menuIcon:not(.steps) .navigationicon:before,
+  .navigation .menuBtn:checked ~ .menuIcon:not(.steps) .navigationicon:after {
+    top: 0;
+  }
+  
+  
+/*-- Responsiveness --*/
+  @media (min-width: 1200px) {
+    .navigation li {
+      float: left;
+    }
+    .navigation li a {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .navigation .menu {
+      float: right;
+      clear: none;
+      max-height: none;
+    }
+    .navigation .menuIcon {
+      display: none;
+    }
+  }
+
+
+#container {
+    margin: auto;
+    height: auto;
+    width: 90%;
+    background: silver;
+    position: relative;
+}
+
+#label {
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    background-color: grey;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: -30px;
+    padding: 15px;
+
+}
+
+body{
+    padding-top: 125px;
+}
+
+.editBtn{
+    background-color: #1bbacc !important;
+}
+
+
+
+.btn-group a
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: green;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: 1s;
+    color: white;
+    width: 250px;
+
+}
+
+
+.btn-group a:hover{
+    background-color: white !important;
+    color: black;
+}
